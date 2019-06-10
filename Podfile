@@ -6,5 +6,5 @@ target 'MakeMeRich' do
   use_frameworks!
 
   # Pods for MakeMeRich
-
+  pod 'SwiftyStoreKit'
 end
