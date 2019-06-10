@@ -12,6 +12,8 @@
 		51210ABC22AE74C3002421F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51210ABA22AE74C3002421F0 /* Main.storyboard */; };
 		51210ABE22AE74C4002421F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51210ABD22AE74C4002421F0 /* Assets.xcassets */; };
 		51210AC122AE74C4002421F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51210ABF22AE74C4002421F0 /* LaunchScreen.storyboard */; };
+		51210AC922AE7EB3002421F0 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51210AC822AE7EB3002421F0 /* PurchaseTableViewCell.swift */; };
+		8D746658AE31726AFC07CE14 /* Pods_MakeMeRich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE9D0E92C2217C0AD7CE8D0 /* Pods_MakeMeRich.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		51210ABD22AE74C4002421F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51210AC022AE74C4002421F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51210AC222AE74C4002421F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51210AC822AE7EB3002421F0 /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
+		9FE9D0E92C2217C0AD7CE8D0 /* Pods_MakeMeRich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeMeRich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D351A457EB6E6157765AB3B5 /* Pods-MakeMeRich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeMeRich.debug.xcconfig"; path = "Target Support Files/Pods-MakeMeRich/Pods-MakeMeRich.debug.xcconfig"; sourceTree = "<group>"; };
+		F41A43FEA731BA379FEADB71 /* Pods-MakeMeRich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeMeRich.release.xcconfig"; path = "Target Support Files/Pods-MakeMeRich/Pods-MakeMeRich.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D746658AE31726AFC07CE14 /* Pods_MakeMeRich.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				51210AB522AE74C3002421F0 /* MakeMeRich */,
 				51210AB422AE74C3002421F0 /* Products */,
+				A7BA7CB9C63832EA8B1A1570 /* Pods */,
+				E3B393D0012971956F80A791 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,27 @@
 				51210ABD22AE74C4002421F0 /* Assets.xcassets */,
 				51210ABF22AE74C4002421F0 /* LaunchScreen.storyboard */,
 				51210AC222AE74C4002421F0 /* Info.plist */,
+				51210AC822AE7EB3002421F0 /* PurchaseTableViewCell.swift */,
 			);
 			path = MakeMeRich;
+			sourceTree = "<group>";
+		};
+		A7BA7CB9C63832EA8B1A1570 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D351A457EB6E6157765AB3B5 /* Pods-MakeMeRich.debug.xcconfig */,
+				F41A43FEA731BA379FEADB71 /* Pods-MakeMeRich.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3B393D0012971956F80A791 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FE9D0E92C2217C0AD7CE8D0 /* Pods_MakeMeRich.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51210AC522AE74C4002421F0 /* Build configuration list for PBXNativeTarget "MakeMeRich" */;
 			buildPhases = (
+				EBE45C3E4ECCDC78BF08CC44 /* [CP] Check Pods Manifest.lock */,
 				51210AAF22AE74C3002421F0 /* Sources */,
 				51210AB022AE74C3002421F0 /* Frameworks */,
 				51210AB122AE74C3002421F0 /* Resources */,
@@ -130,12 +159,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EBE45C3E4ECCDC78BF08CC44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MakeMeRich-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		51210AAF22AE74C3002421F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				51210AB922AE74C3002421F0 /* ViewController.swift in Sources */,
+				51210AC922AE7EB3002421F0 /* PurchaseTableViewCell.swift in Sources */,
 				51210AB722AE74C3002421F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,11 +335,13 @@
 		};
 		51210AC622AE74C4002421F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D351A457EB6E6157765AB3B5 /* Pods-MakeMeRich.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97MVV2N8MA;
 				INFOPLIST_FILE = MakeMeRich/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +355,13 @@
 		};
 		51210AC722AE74C4002421F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F41A43FEA731BA379FEADB71 /* Pods-MakeMeRich.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97MVV2N8MA;
 				INFOPLIST_FILE = MakeMeRich/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
