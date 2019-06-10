@@ -13,6 +13,7 @@
 		51210ABE22AE74C4002421F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51210ABD22AE74C4002421F0 /* Assets.xcassets */; };
 		51210AC122AE74C4002421F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51210ABF22AE74C4002421F0 /* LaunchScreen.storyboard */; };
 		51210AC922AE7EB3002421F0 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51210AC822AE7EB3002421F0 /* PurchaseTableViewCell.swift */; };
+		51EDAD9022AE833700823C23 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDAD8F22AE833700823C23 /* Item.swift */; };
 		8D746658AE31726AFC07CE14 /* Pods_MakeMeRich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE9D0E92C2217C0AD7CE8D0 /* Pods_MakeMeRich.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		51210AC022AE74C4002421F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51210AC222AE74C4002421F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51210AC822AE7EB3002421F0 /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
+		51EDAD8F22AE833700823C23 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9FE9D0E92C2217C0AD7CE8D0 /* Pods_MakeMeRich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeMeRich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D351A457EB6E6157765AB3B5 /* Pods-MakeMeRich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeMeRich.debug.xcconfig"; path = "Target Support Files/Pods-MakeMeRich/Pods-MakeMeRich.debug.xcconfig"; sourceTree = "<group>"; };
 		F41A43FEA731BA379FEADB71 /* Pods-MakeMeRich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeMeRich.release.xcconfig"; path = "Target Support Files/Pods-MakeMeRich/Pods-MakeMeRich.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				51210ABF22AE74C4002421F0 /* LaunchScreen.storyboard */,
 				51210AC222AE74C4002421F0 /* Info.plist */,
 				51210AC822AE7EB3002421F0 /* PurchaseTableViewCell.swift */,
+				51EDAD8F22AE833700823C23 /* Item.swift */,
 			);
 			path = MakeMeRich;
 			sourceTree = "<group>";
@@ -80,7 +83,6 @@
 				D351A457EB6E6157765AB3B5 /* Pods-MakeMeRich.debug.xcconfig */,
 				F41A43FEA731BA379FEADB71 /* Pods-MakeMeRich.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -125,6 +127,11 @@
 				TargetAttributes = {
 					51210AB222AE74C3002421F0 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -189,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EDAD9022AE833700823C23 /* Item.swift in Sources */,
 				51210AB922AE74C3002421F0 /* ViewController.swift in Sources */,
 				51210AC922AE7EB3002421F0 /* PurchaseTableViewCell.swift in Sources */,
 				51210AB722AE74C3002421F0 /* AppDelegate.swift in Sources */,

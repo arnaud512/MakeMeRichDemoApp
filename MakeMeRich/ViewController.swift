@@ -15,7 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var addUnitButton: UIButton!
 
-    var items = [10, 100, 1000, 10000]
+    var items = [
+        Item(name: "10", identifier: ""),
+        Item(name: "100", identifier: ""),
+        Item(name: "1000", identifier: ""),
+        Item(name: "10000", identifier: "")
+    ]
 
     var count = 0
 
@@ -57,7 +62,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "purchaseCell", for: indexPath) as? PurchaseTableViewCell {
-            cell.titleLabel.text = "Buy \(items[indexPath.row]) item"
+            cell.titleLabel.text = "Buy \(items[indexPath.row].name!) item"
             cell.purchaseButton.setTitle("Free", for: .normal)
             return cell
         }
@@ -65,8 +70,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let amount = items[indexPath.row]
-        count += amount
+        let item = items[indexPath.row]
+        count += Int(item.name) ?? 0
         updateUI()
         tableView.deselectRow(at: indexPath, animated: true)
     }
