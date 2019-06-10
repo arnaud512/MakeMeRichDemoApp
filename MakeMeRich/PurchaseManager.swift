@@ -11,21 +11,22 @@ import StoreKit
 import SwiftyStoreKit
 
 class PurchaseManager {
+    // MARK: 3
+//    static func getProductsInfo(items: [Item], completion: @escaping (Set<SKProduct>) -> Void) {
+//        SwiftyStoreKit.retrieveProductsInfo(Set(items.map { $0.identifier })) { results in
+//            completion(results.retrievedProducts)
+//        }
+//    }
 
-    static func getProductsInfo(items: [Item], completion: @escaping (Set<SKProduct>) -> Void) {
-        SwiftyStoreKit.retrieveProductsInfo(Set(items.map { $0.identifier })) { results in
-            completion(results.retrievedProducts)
-        }
-    }
-
-    static func purchase(product: SKProduct, completion: @escaping (PurchaseDetails?) -> Void) {
-        SwiftyStoreKit.purchaseProduct(product, quantity: 1, atomically: false, simulatesAskToBuyInSandbox: false) { result in
-            switch result {
-            case .success(let purchase):
-                completion(purchase)
-            case .error(_):
-                completion(nil)
-            }
-        }
-    }
+    // MARK: 5
+//    static func purchase(product: SKProduct, completion: @escaping (PurchaseDetails?) -> Void) {
+//        SwiftyStoreKit.purchaseProduct(product, quantity: 1, atomically: false, simulatesAskToBuyInSandbox: false) { result in
+//            switch result {
+//            case .success(let purchase):
+//                completion(purchase)
+//            case .error(_):
+//                completion(nil)
+//            }
+//        }
+//    }
 }

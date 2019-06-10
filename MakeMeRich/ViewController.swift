@@ -42,12 +42,12 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        PurchaseManager.getProductsInfo(items: items) { products in
-            self.products = products
-            self.productsLoaded = true
-            self.tableView.reloadData()
-        }
+        // MARK: 2
+//        PurchaseManager.getProductsInfo(items: items) { products in
+//            self.products = products
+//            self.productsLoaded = true
+//            self.tableView.reloadData()
+//        }
     }
 
     func setupUI() {
@@ -72,23 +72,36 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // MARK: 1
+//        return 1
+        return 0
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Purchases"
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "purchaseCell", for: indexPath) as? PurchaseTableViewCell {
             let item = items[indexPath.row]
             cell.titleLabel.text = "Buy \(item.name!) item"
-            if let product = products.first(where: { $0.productIdentifier == item.identifier }) {
-                cell.purchaseButton.setTitle(product.localizedPrice, for: .normal)
-            } else {
-                if productsLoaded {
-                    cell.purchaseButton.setTitle("Error", for: .normal)
-                } else {
-                    cell.purchaseButton.setTitle("Loading price", for: .normal)
-                }
-            }
+            // MARK: 4
+//            if let product = products.first(where: { $0.productIdentifier == item.identifier }) {
+//                cell.purchaseButton.setTitle(product.localizedPrice, for: .normal)
+//            } else {
+//                if productsLoaded {
+//                    cell.purchaseButton.setTitle("Error", for: .normal)
+//                } else {
+//                    cell.purchaseButton.setTitle("Loading price", for: .normal)
+//                }
+//            }
+             cell.purchaseButton.setTitle("Free", for: .normal)
 
             return cell
         }
@@ -97,17 +110,25 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = items[indexPath.row]
-        if let product = products.first(where: { $0.productIdentifier == item.identifier }) {
-            PurchaseManager.purchase(product: product) { purchase in
-                guard let purchase = purchase else { return }
-                self.count += Int(item.name) ?? 0
-                self.updateUI()
-                if purchase.needsFinishTransaction {
-                    SwiftyStoreKit.finishTransaction(purchase.transaction)
-                }
-            }
-        }
+        self.count += Int(item.name) ?? 0
+        self.updateUI()
     }
+
+    // MARK: 6
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let item = items[indexPath.row]
+//        if let product = products.first(where: { $0.productIdentifier == item.identifier }) {
+//            PurchaseManager.purchase(product: product) { purchase in
+//                guard let purchase = purchase else { return }
+//                self.count += Int(item.name) ?? 0
+//                self.updateUI()
+//                // MARK: 7
+//                //if purchase.needsFinishTransaction {
+//                //    SwiftyStoreKit.finishTransaction(purchase.transaction)
+//                //}
+//            }
+//        }
+//    }
 
 
 }
